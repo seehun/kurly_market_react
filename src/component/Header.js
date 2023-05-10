@@ -1,20 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+  const navigate = useNavigate();
   return (
     <div>
       <header>
         <div className='regiser-login'>
           <div className='register-login-group'>
-            <a href='#' className='reigster-login-item'>
+            <a href='/register' className='reigster-login-item'>
               회원가입
             </a>
             <div className='register-login-line'></div>
-            <a href='#' className='reigster-login-item'>
+            <a href='/login' className='reigster-login-item'>
               로그인
             </a>
             <div className='register-login-line'></div>
-            <a href='#' className='reigster-login-item'>
+            <a href='/center' className='reigster-login-item'>
               고객센터
             </a>
           </div>
@@ -22,7 +24,14 @@ function Header() {
         <div className='header-wrap'>
           <div className='header-content'>
             <img src='img/logo.svg' alt='마켓컬리 로고' />
-            <button className='kurly-btn kurly-selected'>마켓컬리</button>
+            <button
+              className='kurly-btn kurly-selected'
+              onClick={() => {
+                navigate('/');
+              }}
+            >
+              마켓컬리
+            </button>
             <div className='register-login-line'></div>
             <button className='kurly-btn kurly-not-selected'>뷰티컬리</button>
           </div>

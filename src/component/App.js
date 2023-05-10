@@ -1,19 +1,20 @@
 // import './style.css';
 
 import Header from './Header';
-import MainImg from './MainImg';
-import DeadlineSale from './DeadlineSale';
-import MarketingBanner from './MarketingBanner';
-import DailySpecilas from './DailySpecilas';
+import { Routes, Route } from 'react-router-dom';
+import Home from '../routes/Home';
+import Login from '../routes/Login';
+import Register from '../routes/Register';
 
 function App() {
   return (
     <div className='container'>
       <Header />
-      <MainImg />
-      <DeadlineSale />
-      <MarketingBanner />
-      <DailySpecilas />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+      </Routes>
     </div>
   );
 }
