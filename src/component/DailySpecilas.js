@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 function DailySpecilas() {
-  const [hour, setHour] = useState('00');
+  const [hour, setHour] = useState('01');
   const [minute, setMinute] = useState('01');
   const [second, setSecond] = useState('05');
 
